@@ -1,12 +1,12 @@
 abstract class AbstractSusciption{
-    private cost : number;
-    private durationDays : number;
-    private publicity : boolean;
+    private cost: number;
+    private durationDays: number;
+    private publicity: boolean;
 
-    public constructor(c : number, d : number, p : boolean){
-        this.cost = c;
-        this.durationDays = d;
-        this.publicity = p;
+    constructor(c : number, d : number, p : boolean){
+        this.cost = c
+        this.durationDays = d
+        this.publicity = p
     }
 
     public setCost(c : number){
@@ -32,6 +32,8 @@ abstract class AbstractSusciption{
     public getPublicity() : boolean{
         return this.publicity;
     }
+
+    public abstract getPlan() : string
 }
 
 export default AbstractSusciption

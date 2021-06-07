@@ -18,12 +18,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var AbstractSuscription_1 = __importDefault(require("../AbstractSuscription"));
-var Free = /** @class */ (function (_super) {
-    __extends(Free, _super);
-    function Free() {
-        return _super !== null && _super.apply(this, arguments) || this;
+var AbstractSuscription_1 = __importDefault(require("./AbstractSuscription"));
+var Premium = /** @class */ (function (_super) {
+    __extends(Premium, _super);
+    function Premium() {
+        return _super.call(this, 9, 30, false) || this;
     }
-    return Free;
+    Premium.prototype.getPlan = function () {
+        return "Premium";
+    };
+    return Premium;
 }(AbstractSuscription_1.default));
-exports.default = Free;
+exports.default = Premium;
